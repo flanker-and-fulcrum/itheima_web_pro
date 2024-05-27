@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/itheima_web_pro.iml" filepath="$PROJECT_DIR$/.idea/itheima_web_pro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-project02/maven-project02.iml" filepath="$PROJECT_DIR$/maven-project02/maven-project02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-projectA/maven-projectA.iml" filepath="$PROJECT_DIR$/maven-projectA/maven-projectA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-projectB/maven-projectB.iml" filepath="$PROJECT_DIR$/maven-projectB/maven-projectB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-projectC/maven-projectC.iml" filepath="$PROJECT_DIR$/maven-projectC/maven-projectC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mavenproject01/mavenproject01.iml" filepath="$PROJECT_DIR$/mavenproject01/mavenproject01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-mybaits/springboot-mybaits.iml" filepath="$PROJECT_DIR$/springboot-mybaits/springboot-mybaits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-mybatis-crud/springboot-mybatis-crud.iml" filepath="$PROJECT_DIR$/springboot-mybatis-crud/springboot-mybatis-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tlias-web-management/tlias-web-management.iml" filepath="$PROJECT_DIR$/tlias-web-management/tlias-web-management.iml" />
+    </modules>
+  </component>
+</project>

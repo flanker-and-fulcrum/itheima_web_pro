@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.mapper.EmpMapper">
+<!--    resultType是单条记录封装的类型-->
+    <select id="SelectLike2" resultType="com.itheima.pojo.Emp">
+        select * from db04.emp where name like concat('%',#{name},'%')
+            and entrydate >= #{begin}
+            and  #{end} >= entrydate
+--         public Emp[] SelectLike2(String name, LocalDate begin, LocalDate end);
+    </select>
+
+    <select id="SelectDynamicSql" resultType="com.itheima.pojo.Emp">
+        select *
+        from db04.emp
+        where
+        <if test="name!=null">name='%${name}%'</if>
+        <if test="genders!=null"> and gender=#{genders}</if>
+        <if test="begins!=null"> and entrydate>=#{begins}</if>
+        <if test="end!=null"> and #{end}>=entrydate</if>
+    </select>
+
+    <select id="SelectDynamicSql2" resultType="com.itheima.pojo.Emp">
+        select *
+        from db04.emp
+        <where>
+            <if test="name!=null">name='%${name}%'</if>
+            <if test="genders!=null"> and gender=#{genders}</if>
+            <if test="begins!=null"> and entrydate>=#{begins}</if>
+            <if test="end!=null"> and #{end}>=entrydate</if>
+        </where>
+    </select>
+
+    <update id="UpdateDynamicSql">
+        update db04.emp
+        <set>
+            <if test="username!=null">username=#{username},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="gender!=null">gender=#{gender},</if>
+            <if test="image!=null">image=#{image},</if>
+            <if test="job!=null">job=#{job},</if>
+            <if test="entrydate!=null">entrydate=#{entrydate},</if>
+            <if test="deptId!=null">dept_id=#{deptId},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="updateTime!=null">update_time=#{updateTime}</if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteDynamicSqlByIds">
+        delete
+        from db04.emp
+        where id in
+        <foreach collection="Ids"  item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
